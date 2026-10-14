@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 2
+  m_ComponentVersion: 3
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
@@ -3194,9 +3194,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f74c7a7c9bed7d74db0ba2de57160977, type: 2}
   - {fileID: 11400000, guid: 5e5888ebd0846cd4f9c4e795ffb1d6d5, type: 2}
   - {fileID: 11400000, guid: eca9540f40838db4eacd0db7e44a5b44, type: 2}
+  - {fileID: 11400000, guid: edc2bfde17ca4bca884c829688872c11, type: 2}
+  - {fileID: 11400000, guid: ef39564bf6aa40c6acb00caeb5911738, type: 2}
+  - {fileID: 11400000, guid: 73432df236ad4048be25ba311ab99018, type: 2}
+  - {fileID: 11400000, guid: 6ac1276dbf0148eb967c9cfe57fb5628, type: 2}
+  - {fileID: 11400000, guid: 276560fc3e7c424d91080767c61d2e75, type: 2}
+  - {fileID: 11400000, guid: f603c9f653214fa78f6f772a69c82368, type: 2}
+  - {fileID: 11400000, guid: 3bc8573b37244330943c8647f58d1828, type: 2}
+  - {fileID: 11400000, guid: 34ed613b0fd9407e81faeaa096f325ff, type: 2}
+  - {fileID: 11400000, guid: f4cc3988b05e47b7913b2aa61738607d, type: 2}
+  - {fileID: 11400000, guid: b6d7dd4892dc4b29990d72edf3e67d74, type: 2}
+  - {fileID: 11400000, guid: 1d1c42e1ac3a426793cbe0cfbfa7c798, type: 2}
+  - {fileID: 11400000, guid: 5fc299100afa42c3bac8e480009ba60c, type: 2}
+  - {fileID: 11400000, guid: f403bf4caad849e297157c8c6d63c31d, type: 2}
+  - {fileID: 11400000, guid: 7648b88b24784c359d5cd330dff2dbe3, type: 2}
+  - {fileID: 11400000, guid: c77802f61ea741a98915eed9400c93cd, type: 2}
   navalUnitData:
   - {fileID: 11400000, guid: c2b629827c9821d4185b71e921d8e2b9, type: 2}
   - {fileID: 11400000, guid: 7a2216c04fddf454f9d2e84a0c848308, type: 2}
+  - {fileID: 11400000, guid: b906a9ffe8684a9487d0849f7d4b28c7, type: 2}
+  - {fileID: 11400000, guid: b39f7383904c48c49b9aa93b097732b2, type: 2}
+  - {fileID: 11400000, guid: 8c137d21e5db4d698786074534affe42, type: 2}
+  - {fileID: 11400000, guid: 4b0755e7f0de4912af3c9168d38b6ef0, type: 2}
   playerTurn: 1
   gameTurn: 1
   nativeTownNum: 0
