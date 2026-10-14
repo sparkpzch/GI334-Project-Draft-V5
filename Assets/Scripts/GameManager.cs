@@ -565,6 +565,10 @@ public class GameManager : MonoBehaviour
 
     public void SetupCurrentTown(Town town)//setup town panel
     {
+        //--- New Code ---
+        if (UIManager.instance.TownPanel.activeSelf)
+            return;
+
         curTown = town;
         Hex[] aroundHexes = HexCalculator.GetHexAroundToArray(allHexes, curTown.CurHex);
 

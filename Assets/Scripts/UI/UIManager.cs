@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+//--- New Code ---
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -43,7 +45,9 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //--- New Code ---
+        if (townPanel.activeSelf && Keyboard.current.escapeKey.wasPressedThisFrame)
+            ToggleTownPanel(false);
     }
 
     public void SetupHexSlots(Hex centerHex, Hex[] aroundHexes)

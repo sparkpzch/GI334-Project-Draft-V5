@@ -167,6 +167,10 @@ public class LandUnit : Unit
         {
             base.PrepareMoveToHex(targetHex);
 
+            //--- New Code ---
+            if (!isMoving)
+                return;
+
             if (unitStatus == UnitStatus.OnBoard)
                 MakeLandFall();
         }

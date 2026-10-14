@@ -240,6 +240,10 @@ public class Hex : MonoBehaviour, IPointerClickHandler
 
     public void ClearForest()
     {
+        //--- New Code ---
+        if (hasForest)
+            moveCost -= 1;
+
         hasForest = false;
         forestSprite.gameObject.SetActive(false);
     }

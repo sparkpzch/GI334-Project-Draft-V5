@@ -57,6 +57,10 @@ public class AIManager : MonoBehaviour
                 //Debug.Log("Move");
                 AutoMoveToHex(unit);
 
+                //--- New Code ---
+                if (!unit.Visible)
+                    continue;
+
                 yield return new WaitForSeconds(0.1f);
             }
         }
