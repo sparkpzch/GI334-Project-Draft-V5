@@ -416,6 +416,17 @@ public class GameManager : MonoBehaviour
         if (i >= playerFaction.Units.Count)
             i = 0;
 
+        //--- New Code ---
+        for (int n = 0; n < playerFaction.Units.Count; n++)
+        {
+            if (playerFaction.Units[i].UnitStatus != UnitStatus.WorkInField)
+                break;
+
+            i++;
+            if (i >= playerFaction.Units.Count)
+                i = 0;
+        }
+
         SelectPlayerUnit(playerFaction.Units[i]);
         CameraController.instance.MoveCamera(curUnit.transform.position);
     }
@@ -541,6 +552,10 @@ public class GameManager : MonoBehaviour
 
     public void Endturn()
     {
+        //--- New Code ---
+        if (!playerTurn || UIManager.instance.TownPanel.activeSelf)
+            return;
+
         if (curUnit != null)
             curUnit.ToggleBorder(false, Color.green);
 
@@ -567,6 +582,9 @@ public class GameManager : MonoBehaviour
     {
         //--- New Code ---
         if (UIManager.instance.TownPanel.activeSelf)
+            return;
+
+        if (town.Faction != playerFaction)
             return;
 
         curTown = town;

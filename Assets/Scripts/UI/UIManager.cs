@@ -75,6 +75,9 @@ public class UIManager : MonoBehaviour
         {
             if (unit.UnitStatus == UnitStatus.WorkInField)
                 unit.gameObject.SetActive(false);
+            //--- New Code ---
+            else if (unit.UnitStatus == UnitStatus.None)
+                unit.gameObject.SetActive(true);
         }
     }
 

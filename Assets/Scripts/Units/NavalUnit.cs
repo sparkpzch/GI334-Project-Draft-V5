@@ -52,6 +52,10 @@ public class NavalUnit : Unit
 
     public override void PrepareMoveToHex(Hex targetHex) //Begin to move by RC or AI auto movement
     {
+        //--- New Code ---
+        if (isMoving)
+            return;
+
         base.PrepareMoveToHex(targetHex);
 
         if (targetHex.HexType != HexType.Ocean)

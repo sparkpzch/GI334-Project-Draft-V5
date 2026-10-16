@@ -54,6 +54,10 @@ public class UnitDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         transform.SetParent(iconParent);
         unitImage.raycastTarget = true;
+
+        //--- New Code ---
+        if (iconParent.GetComponent<LayoutGroup>() == null)
+            transform.localPosition = Vector3.zero;
     }
 
     public void QuitOldTerrainSlot()

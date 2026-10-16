@@ -70,6 +70,10 @@ public class TerrainSlot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        //--- New Code ---
+        if (hex == null)
+            return;
+
         if (centerHex || hex.Labor != null)
             return;
 
@@ -88,6 +92,12 @@ public class TerrainSlot : MonoBehaviour, IDropHandler
 
     public void HexSlotInit(Hex hexData)
     {
+        //--- New Code ---
+        hex = hexData;
+        terrainImage.enabled = hexData != null;
+        forestImage.gameObject.SetActive(false);
+        townImage.gameObject.SetActive(false);
+
         if (hexData != null)
         {
             hex = hexData;

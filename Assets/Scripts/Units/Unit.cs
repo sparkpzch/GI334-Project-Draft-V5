@@ -171,6 +171,20 @@ public class Unit : MonoBehaviour, IPointerClickHandler
         //Debug.Log($"MoveCost-{target.MoveCost}");
         //Debug.Log($"UnitMovementP-{movePoint}");
 
+        //--- New Code ---
+        if (isMoving || movePoint <= 0)
+            return;
+
+        if (target.MoveCost > movePoint && movePoint == movePointMax)
+        {
+            isMoving = true;
+            targetHex = target;
+
+            if (faction == gameMgr.PlayerFaction)
+                gameMgr.LeaveSeenFogAroundUnit(this);
+            return;
+        }
+
         if (target.MoveCost > movePoint)
             return;
 
@@ -214,6 +228,10 @@ public class Unit : MonoBehaviour, IPointerClickHandler
         if (curPos == targetHex.Pos) //Reach Destination
         {
             movePoint -= targetHex.MoveCost;
+            //--- New Code ---
+            if (movePoint < 0)
+                movePoint = 0;
+
             StayOnHex(targetHex);
 
             if (faction == gameMgr.PlayerFaction)

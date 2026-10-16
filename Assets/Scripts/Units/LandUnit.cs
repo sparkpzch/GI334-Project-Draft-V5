@@ -163,6 +163,10 @@ public class LandUnit : Unit
     {
         //Debug.Log($"{unitName}:walks");
 
+        //--- New Code ---
+        if (isMoving)
+            return;
+
         if (targetHex.HexType != HexType.Ocean)
         {
             base.PrepareMoveToHex(targetHex);
